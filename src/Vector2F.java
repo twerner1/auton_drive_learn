@@ -18,19 +18,21 @@ public class Vector2F {
     // for all of these functions, you are allowed to use java Math builtins only.
     // TODO: implement this
     public Vector2F subtract(Vector2F subtrahend) {
-        // return this - subtrahend
-        return null;
+        int nx = getX() - subtrahend.getX();
+				int ny = getY() - subtrahend.getY();
+				return Vector2F(nx,ny);
     }
 
     // TODO: implement this
     public float getAngle() {
         // get the angle CCW from the +x axis
-        return 0;
+		//arctan(frac)
+		return Math.atan(getY()/getX());
     }
 
     // TODO: implement this
     public float getMagnitude() {
         // get the magnitude of the vector
-        return 0;
+        return sqrt(sqr(getX())+sqr(getY()));
     }
 }
